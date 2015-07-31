@@ -2,8 +2,8 @@
 require 'bundler'
 Bundler.require
 
-configure :production, :development do
-	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+configure :production do
+	db = URI.parse(ENV['DATABASE_URL'])
 
 	ActiveRecord::Base.establish_connection(
 			:adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
@@ -13,4 +13,8 @@ configure :production, :development do
 			:database => db.path[1..-1],
 			:encoding => 'utf8'
 	)
+end
+
+configure :development do
+  set :database, "sqlite3:db/database.db"
 end
