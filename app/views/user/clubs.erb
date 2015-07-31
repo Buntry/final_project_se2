@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <% if logged %>
+        <center><h1><a href="/user/<%= @user.id %>"><%= @user.username %>'s</a> Clubs:</h1></center>
+        <% end %>
+
+        <h4>
+            <% @clubs.each do |club| %>
+            
+                <a href="/user/<%= club.id %>"> <%= club.name %> </a>,
+            
+            <% end %>
+        </h4>
+
+    </body>
+</html>

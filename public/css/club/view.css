@@ -1,0 +1,109 @@
+.club_view {
+    min-height: 100%;
+}
+
+.club_name {
+    float: left;
+}
+
+.club_view_image {
+    height: 350px;
+    width: 350px;
+}
+
+.inactive {
+    display: none;
+}
+
+.club_main_view {
+    float: left;
+    position: fixed;
+    
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    margin-top: 30px;
+    margin-left: 50px;
+    
+    width: 40vw;
+    background-color: #F5F0E3;
+    
+    border-style: solid;
+    border-color: white;
+    border-radius: 3%;
+}
+
+.club_info {
+    margin-bottom: -15px;
+}
+
+.white_space {
+    border-style: none;
+    background-color: white;
+    height: 150px;
+}
+
+.members {
+    font-size: 17px;
+}
+
+.activity_feed {
+    float: right;
+    
+    margin-top: 30px;
+    margin-right: 50px;
+    
+    width: 40vw;
+    
+    border-style: solid;
+    border-color: white;
+    border-radius: 3%;
+}
+
+.activity_feed_header {
+    
+    background-color: #F5F0E3;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    width: 40vw;
+    
+    border-style: solid;
+    border-color: white;
+    border-radius: 3%;
+}
+
+.activity_feed_item {
+    
+    padding: 30px;
+    
+    border-top-style: none;
+    border-bottom-style: dashed;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    border-color: #1D7880;
+    border-width: 5px;
+    
+}
+
+.activity_title * {
+    display: inline-block;
+}
+
+.btn-info{
+    color:#ffffff;background-color:#56BAFD;border-color:#56BAFD
+}
+.btn-info{
+    color:#ffffff;background-color:#439FDD;border-color:#4299D4
+}
+.btn-info.active{
+    background-color:#56BAFD;border-color:#56BAFD
+}
+.btn-info .badge{
+    color:#56BAFD;background-color:#ffffff
+}
+

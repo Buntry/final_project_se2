@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    </head>
+    <body>
+        <div class="new_club">
+            <h1>Create a New Club</h1><br>
+            <form class="form-horizontal new_club_form" action='/new_club' method='POST'>
+                <input class="btn-top new_club_form form-control" type='text' name='name' placeholder='Name'><br>
+                <input class="btn-top new_club_form form-control" type='text' name='description' placeholder='Description'><br>
+                <input class="btn-top new_club_form form-control" type='text' name='image_url' placeholder='Image Url'><br>
+                <input class="btn-top new_club_form form-control" type='text' name='keyword_list' placeholder='Keyword List'><br>
+                <input class="btn-top new_club_form form-control" type='text' name='contact_info' placeholder='Contact Info'><br>
+                <input class="btn btn-default" type='Submit'>
+            </form>
+        </div>
+    </body>
+    
+</html>
+
+<!--<h1> Sign Up <h1>-->
+  
+<!--  <form action="/signup" method="POST">-->
+<!--    <input type="text" name="username" placeholder="Username">-->
+<!--    <input type="text" name="email" placeholder="Email">-->
+<!--    <input type="text" name="password" placeholder="Password">-->
+<!--    <input type="text" name="bio" placeholder="Bio">-->
+<!--    <input type="Submit">-->
+    
+<!--  </form>-->

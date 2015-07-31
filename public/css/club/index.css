@@ -1,0 +1,29 @@
+.club_index {
+    position: absolute;
+    width: 100%;
+    min-height: 85%;
+ 
+    background: -webkit-linear-gradient(0deg, #C2C8D3, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(0deg, #C2C8D3, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(0deg, #C2C8D3, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, #C2C8D3, white); /* Standard syntax (must be last) */
+}
+
+.club_index_item {
+    display: inline-block;
+    
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 40px;
+    
+    width: 440px;
+    height: 130px;
+}
+
+.club_index_item {
+    float: left;
+}
+
+.info * {
+    display: inline;
+}

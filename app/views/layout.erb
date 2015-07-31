@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html>
+<head>
+
+  <title>JoinIn</title>
+
+  <!-- Standard Meta Build -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="a site i made using the sinatra framework">
+  <meta name="author" content="Vanessa Pinney, Parker Griep, Richard Chen">
+
+  <!--Bootstrap CSS-->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!--Custom Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--Custom CSS-->
+  <link href="/css/style.css" rel="stylesheet">
+  <!--Custom JS-->
+  <script language="javascript" type="text/javascript"></script>
+</head>
+<body>
+  
+  <div class="flash">
+    <% ['notice', 'alert', 'error'].each do |path| %>
+      <% if flash[path.to_sym] %>
+        <div class="flash_<%= path %>">
+          <h3> <%= flash[path.to_sym] %> </h3>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class="wrapper">
+    <%= erb :navbar %>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/user/view.css">
+    </head>
+    <center>
+        <h1><%= @user.username %></h1>
+        <img class="user_view_image" src="<%= @user.profile_picture %>"><br>
+        
+        Location: <%= @user.location %><br>
+        Age: <%= @user.age %><br>
+        Email: <%= @user.email %><br>
+        
+        <% if session[:user_id] == @user.id %>
+            <h2>Activity feed</h2>
+            
+            <% @user.activities.each do |act| %>
+                <a href="/club/<%= act.club.id %>"><%= "#{act.name} from #{act.club.name}" %> <br></a>
+                <%= act.description %> <br>
+                <%= act.date %> <br>
+            <% end %>
+        <% end %>
+        
+    </center>
+    
+</html>

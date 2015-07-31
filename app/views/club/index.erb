@@ -1,0 +1,31 @@
+<head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/club/index.css">
+</head>
+
+<%= erb :'club/search' %>
+
+<div class='club_index'>
+    <% @clubs.shuffle.each do |club| %>
+        <div class='club_index_item'>
+           <h3><a href='/club/<%= club.id %>'><%= club.name %></a></h3>
+           <div class="info">
+               <h4>Description: </h4>
+               <p><%= club.description %></p>
+           </div>
+           <div class="info">
+               <h4>Owner: </h4>
+               <p><%= club.owner.username %></p>
+           </div>
+           <div class="info">
+               <h4>Keywords: </h4> <p>| 
+                   <% club.parse.each do |word| %>
+                        <%= "#{word} |" %>
+                   <% end %>
+               </p>
+           </div>
+        </div>
+    <% end %>
+</div>

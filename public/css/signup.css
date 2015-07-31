@@ -1,0 +1,25 @@
+.signup, .login {
+    margin: 40px;
+    width: 400px;
+}
+
+.btn-right {
+    margin-right: 10px;
+}
+
+.btn-top {
+    margin-bottom: 7px;
+}
+
+.search_bar {
+    margin-left: 20px;
+}
+
+.new_club {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.new_club_form {
+    width: 300px;
+}

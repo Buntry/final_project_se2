@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+.user_view_image {
+    height: 300px;
+    width: 300px;
+}
+
+.inactive {
+    display: none;
+}
+
+.user_view {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    margin-top: 30px;
+    margin-left: 50px;
+    
+    width: 40vw;
+    background-color: #F5F0E3;
+    
+    border-style: solid;
+    border-color: white;
+    border-radius: 3%;
+}

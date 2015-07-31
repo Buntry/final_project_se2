@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form class="form-horizontal signup" action="/club/<%=@club.id%>/new_activity" method="POST">
+            <input class="form-control btn-top" type='text' name='name' placeholder='Name'>
+            <input class="form-control btn-top" type='text' name='description' placeholder='Description'>
+            <input class="form-control btn-top" type='date' name='date' placeholder='Date'>
+            <input class="form-control btn-top" type='time' name='time' placeholder='Time'>
+            <input class="form-control btn-top" type='text' name='length' placeholder='Length'>
+            <input class="form-control btn-top" type='text' name='location' placeholder='Location'>
+            <input class="form-control btn-top" type='Submit'>
+            </form>
+    </body>
+</html>

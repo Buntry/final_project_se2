@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/club/view.css" rel="stylesheet">
+    </head>
+    <div class="club_view">
+        <div class="club_main_view">
+            <h2 class="club_name"><%= @club.name %> <a class="members" href="/club/<%= @club.id %>/members">:Members</a></h2> <br>
+            <img class="club_view_image" src=<%=@club.image_url %>>
+            
+            <div class="club_info">
+                <h3>Description</h3>
+                    <p><%=@club.description%></p>
+                <h3>Owner Information</h3>
+                    <p><%=@club.owner.username %></p>
+                <h3>Contact Information</h3>
+                    <p><%=@club.contact_info%></p>
+                    
+                <form class="<%= 'inactive' if logged.nil? || club_includes?(@club.id, logged) %>" action="/club/<%= @club.id %>" method='post'>
+                    <button class="join_club btn btn-info" type="submit">Join <%= @club.name %></button>
+                </form>
+                <div class="whitespace">
+                </div>
+            </div>
+        </div>
+        
+        <% if logged && club_includes?(@club.id, logged) %>
+        <div class="activity_feed">
+            <div class="activity_feed_header">
+                <h2>Activity Feed</h2>
+                <h3><a href="/club/<%= @club.id %>/new_activity">Make a new activity</a></h3>
+            </div>
+            <% @club.activities.each do |activity| %>
+                <div class="activity_feed_item">
+                    <div class="activity_title">
+                        <h4><%= activity.name %> </h4>
+                        <p> hosted by <%= activity.owner.username %></p>
+                    </div>
+                    <div class="activity_info">
+                        <p><%= activity.description %></p>
+                        <p> Date : <%= activity.date %>, Length: <%= activity.length %> hours, Time: <%= activity.time %></p>
+                    </div>
+                    
+                    <div class="<%= 'inactive' if activity_includes?(activity.id, logged) %>">
+                        <form action='/club/<%=@club.id%>/join_activity' method="POST">
+                            <input type="hidden" name="activity_id" value="<%= activity.id %>"/>
+                            <button class='join_activity btn btn-info' type='submit'> Join <%= activity.name %></button>
+                        </form>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+</html>

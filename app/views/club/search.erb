@@ -1,0 +1,13 @@
+<head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+
+    <form class="form-inline search_bar" action='/search' method='post'>
+        <p>Enter a keyword for a club <a href='/new_club'><%= 'or create your own' if logged %></a></p>
+        <input class="form-control btn-right" type='text' id='club_search_bar' name='query' />
+        <input class="btn btn-default" name="Search" type='submit'/>
+    </form>
+</body>

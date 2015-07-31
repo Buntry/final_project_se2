@@ -1,0 +1,173 @@
+Alright so this is just how we are going to all be in the same mindset when we create this sinatra app
+Make sure when you are actually coding that you comment everything so everyone is on the same page
+
+NOTE : These things are listed in order of priority, and thus we will do them in this order
+
+
+_____________________________________________________________________________________________________________________
+|   IDEA BOX!                                                                                               
+|                                                                                               
+|                                                                        
+|       
+|   
+|
+|
+|
+|
+|
+L___________________________________________________________________________________________________________________
+
+   _____ _                                           _   _____      _       _   _                 _     _           
+  / ____| |                                         | | |  __ \    | |     | | (_)               | |   (_)          
+ | |    | | __ _ ___ ___  ___  ___    __ _ _ __   __| | | |__) |___| | __ _| |_ _  ___  _ __  ___| |__  _ _ __  ___ 
+ | |    | |/ _` / __/ __|/ _ \/ __|  / _` | '_ \ / _` | |  _  // _ \ |/ _` | __| |/ _ \| '_ \/ __| '_ \| | '_ \/ __|
+ | |____| | (_| \__ \__ \  __/\__ \ | (_| | | | | (_| | | | \ \  __/ | (_| | |_| | (_) | | | \__ \ | | | | |_) \__ \
+  \_____|_|\__,_|___/___/\___||___/  \__,_|_| |_|\__,_| |_|  \_\___|_|\__,_|\__|_|\___/|_| |_|___/_| |_|_| .__/|___/
+                                                                                                         | |        
+                                                                                                         |_|        
+_______________________________________________________________________________________________________________________
+
+USER CLASS {
+
+    A USER WILL HAVE:
+        A username that is a string
+        A password_hash that is a string (talk to parker about BCrypt)
+        A location that is a string
+    
+    USERS HAVE MANY:
+        Activities
+        Clubs
+            
+    USERS CAN:
+        Create clubs
+        Create activities
+        Join clubs
+        Join activities
+            
+    ****BONUS****
+    USERS CAN:
+        See how far away they are from their activites
+        
+}
+
+CLUB CLASS {
+
+    A CLUB WILL HAVE:
+        A name that is a string
+        A description that is a text...string...
+        
+        An owner that is a USER
+        Members who are also users
+        
+        A couple of keywords so users can find it
+        Contact information
+ 
+        
+    A CLUB BELONGS TO:
+        User
+    
+    CLUBS HAVE MANY:
+        Activities
+    
+    CLUBS CAN:
+        Be searched by their keywords
+
+}
+
+ACTIVITY CLASS {
+    
+    AN ACTIVITY WILL HAVE:
+        Name
+        Description
+        Time and place
+        Length 
+        
+    ACTIVITIES BELONG TO: 
+        A club and a user
+        
+    ACTIVITIES HAVE MANY:
+        Users
+    
+    ACTIVITIES CAN:
+        Be searched by their properties (name, description, etc.)
+        
+}
+
+  _____             _                      _   _                 
+ |  __ \           | |           /\       | | (_)                
+ | |__) |___  _   _| |_ ___     /  \   ___| |_ _  ___  _ __  ___ 
+ |  _  // _ \| | | | __/ _ \   / /\ \ / __| __| |/ _ \| '_ \/ __|
+ | | \ \ (_) | |_| | ||  __/  / ____ \ (__| |_| | (_) | | | \__ \
+ |_|  \_\___/ \__,_|\__\___| /_/    \_\___|\__|_|\___/|_| |_|___/
+____________________________________________________________________
+
+
+USERS CAN SIGN UP A NEW USER {
+    will signup at the signup page
+    
+    after signing up, they will be redirected to either the club search or the main page
+}
+
+USERS CAN LOG IN {
+    will log in at the log in page
+    
+    after logging in, they will be redirected to either the club search or the main page
+}
+
+USERS CAN LOG OUT {
+    will click a button and be logged out, redirect to sign in 
+}
+
+USERS CAN SEE ALL THE CLUBS {
+    can see the clubs entered into the database and click them for more details
+}
+
+USERS CAN SEARCH FOR A CLUB {
+    can enter key words into search bar and clubs with those words will come up and be able to click 
+}
+
+USERS CAN CREATE A NEW CLUB {
+    will create on create a club page and enter necessary info
+    
+    club will be pushed into database and be available on club page
+}
+
+USERS CAN JOIN CLUBS {
+    user can click join button and will be added to club 
+}
+
+USERS (OWNERS) CAN CREATE ACTIVITY {
+    owner can create club activity, enter info, and it will appear in club 
+}
+
+   _____ _         _                 _____                                         
+  / ____| |       | (_)             |  __ \                                        
+ | (___ | |_ _   _| |_ _ __   __ _  | |__) |___  ___  ___  _   _ _ __ ___ ___  ___ 
+  \___ \| __| | | | | | '_ \ / _` | |  _  // _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+  ____) | |_| |_| | | | | | | (_| | | | \ \  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+ |_____/ \__|\__, |_|_|_| |_|\__, | |_|  \_\___||___/\___/ \__,_|_|  \___\___||___/
+              __/ |           __/ |                                                
+             |___/           |___/                                                 
+_____________________________________________________________________________________
+
+LINKS == *
+
+BOOTSTRAP CSS PAGE: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+
+COLOR {
+
+    USE PALETTON TO CREATE A THEME FOR THE WEBSITE
+    
+    LINK = http://paletton.com/
+
+    OUR THEME = http://coolors.co/app/807ca8-5758a8-515b89-82755d-a89176
+
+}
+
+FONT MIXING {
+    
+    FONT 1 = *
+    FONT 2 = *
+    FONT 3 = *
+    
+}

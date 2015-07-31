@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link href="/css/club/members.css" rel="stylesheet">
+    </head>
+    
+<% if logged %>
+        <center><h1><a href="/club/<%= @club.id %>"><%= @club.name %>'s</a> Members:</h1></center>
+        <% end %>
+    <div class="user_listing">
+        <h4>
+            <% @users.each do |user| %>
+            
+                <a href="/user/<%= user.id %>"> <%= user.username %> </a>,
+            
+            <% end %>
+        </h4>
+    </div>
+</html>
