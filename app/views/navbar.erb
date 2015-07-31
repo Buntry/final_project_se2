@@ -23,7 +23,7 @@
           <div class="user_info">
             <% if logged %>
                <% user = User.find(logged) %>
-               <p> Welcome, <%= user.username %> | <a class="text-right log_link" href='/user/<%= user.id %>'>My Profile</a> | <a class="text-right log_link" href='/logout'>Log Out</a> </p>
+               <p> Welcome, <%= user.username %> | <a class="text-right log_link" href='/user/<%= user.id %>'>My Profile</a> | <a class="text-right log_link" href='/user/<%= user.id %>/clubs'>My Clubs</a> | <a class="text-right log_link" href='/logout'>Log Out</a> </p>
             <% else %>
                <p class="text-right"> <a class="log_link" href='/login'>Log In</a>  |  <a class="log_link" href='/signup'>Sign Up</a></p>
             <% end %>

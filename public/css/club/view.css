@@ -17,7 +17,7 @@
 
 .club_main_view {
     float: left;
-    position: fixed;
+    position: static;
     
     padding-left: 100px;
     padding-right: 100px;
