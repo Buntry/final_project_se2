@@ -11,10 +11,16 @@ gem 'require_all'
 gem 'bcrypt'
 
 
-group :development, :production do
+group :production do
+  gem "pry"
+  gem "shotgun"
+  gem "tux"
+  gem 'pg'
+end
+
+group :development do
   gem "pry"
   gem "shotgun"
   gem "tux"
   gem 'sqlite3'
-  gem 'pg'
 end
