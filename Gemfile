@@ -14,5 +14,5 @@ group :development, :production do
   gem "pry"
   gem "shotgun"
   gem "tux"
-  gem 'sqlite3'
+  gem 'pg'
 end
