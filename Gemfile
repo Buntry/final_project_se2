@@ -12,9 +12,6 @@ gem 'bcrypt'
 
 
 group :production do
-  gem "pry"
-  gem "shotgun"
-  gem "tux"
   gem 'pg'
 end
 
